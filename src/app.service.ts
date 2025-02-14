@@ -21,4 +21,8 @@ export class AppService {
       age: '19',
     };
   }
+
+  getGitandGithup(){
+    return 'Git and Githup Using';
+  }
 }

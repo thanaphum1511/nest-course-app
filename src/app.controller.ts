@@ -26,4 +26,9 @@ export class AppController {
     return this.appService.getJSON();
   }
 
+  @Get('/showtestGitandgithup')
+  getGitandGithup() {
+    return this.appService.getGitandGithup();
+  }
+
 }
