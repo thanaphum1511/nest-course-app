@@ -25,4 +25,8 @@ export class AppService {
   getGitandGithup(){
     return 'Git and Githup Using';
   }
+
+  getPostman(){
+    return 'we use postman';
+  }
 }

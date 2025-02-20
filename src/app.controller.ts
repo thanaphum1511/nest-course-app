@@ -31,4 +31,9 @@ export class AppController {
     return this.appService.getGitandGithup();
   }
 
+  @Get('/usepostman')
+  getPostman() {
+    return this.appService.getPostman();
+  }
+
 }
