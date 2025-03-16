@@ -4,6 +4,6 @@ import {UtilityModule} from 'src/shared/utility/utility.module';
 
 @Module({
   imports: [UtilityModule],
-  controllers: [ChatController]
+  controllers: [ChatController],
 })
 export class ChatModule {}
