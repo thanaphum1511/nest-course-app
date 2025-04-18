@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 2px solid black; */
+}
+
+body {
+    height: 1500px;
+    width: 100vw;
+    display: flex;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+  
+
+    
+}
+
+.box1 {
+    right: 0px;
+    bottom: 0px;
+    background: red;
+    line-height: 100px; 
+}
+
+.box2 {
+    line-height: 100px; 
+    background: blue;
+}
+
+.box3 {
+    background: yellow;
+    line-height: 100px; 
+}
+
+.box4{
+    background: green;
+    line-height: 100px; 
+}
+

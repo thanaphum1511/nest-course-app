@@ -1,23 +1,43 @@
-import { Controller, Get } from '@nestjs/common';
-import { UtilityService } from 'src/shared/utility/utility.service';
-import { GlobalHelperService } from 'src/shared/global-helper/global-helper.service';
+// orders.controller.ts
+import {
+  Controller,
+  Get,
+  Post,
+  Patch,
+  Delete,
+  Param,
+  Body,
+} from '@nestjs/common';
+import { OrdersService } from './order.service';
+import { CreateOrderDto } from './dto/create-order.dto';
+import { UpdateOrderDto } from './dto/update-order.dto';
 
+@Controller('orders')
+export class OrdersController {
+  constructor(private readonly ordersService: OrdersService) {}
 
-@Controller('order')
-export class OrderController {
-    constructor(private readonly utilityservice: UtilityService,
-                private readonly utilityService: UtilityService,
-                private readonly globalHelperService: GlobalHelperService
-    ){}
+  @Post()
+  create(@Body() createOrderDto: CreateOrderDto) {
+    return this.ordersService.create(createOrderDto);
+  }
 
-    @Get('/shared')
-    orderFunc(): string{
-        return this.utilityservice.orderFunc();
-    }
+  @Get()
+  findAll() {
+    return this.ordersService.findAll();
+  }
 
-    @Get('/global')
-    globalFunc(): string{
-        return this.globalHelperService.globalFunc();
-    }
+  @Get(':id')
+  findOne(@Param('id') id: string) {
+    return this.ordersService.findOne(+id);
+  }
+
+  @Patch(':id')
+  update(@Param('id') id: string, @Body() updateOrderDto: UpdateOrderDto) {
+    return this.ordersService.update(+id, updateOrderDto);
+  }
+
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return this.ordersService.remove(+id);
+  }
 }
-

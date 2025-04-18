@@ -1,0 +1,145 @@
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  height: 100vh;
+  gap: 0.5em;
+}
+
+.main-section {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background-image: url("https://images.unsplash.com/photo-1694875546238-67cb3596adf1?q=80&w=1336&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3FDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  display: grid;
+  gap: 20px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 180px;
+  font-weight: bold;
+  font-family: "Futura", "Noto Sans", sans-serif;
+  color: yellow;
+  text-shadow: 1px 1px 0 #000;
+  margin-bottom: 20px;
+}
+
+.shop-button {
+  background-color: yellow;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.sidebar {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0.5em;
+}
+
+.sidebar-item {
+  position: relative;
+  display: grid;
+  background-size: cover;
+  background-position: center;
+}
+
+.ikea-today {
+  background-image: url("https://media.istockphoto.com/id/1286327958/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%8A%E0%B8%B8%E0%B8%94%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%99%E0%B8%B4%E0%B9%80%E0%B8%88%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%81%E0%B8%AB%E0%B9%89%E0%B8%A7.jpg?s=2048x2048&w=is&k=20&c=Hj6V3bhC_mJm6njMadg9c_0mK7TJdL4XKA53ZnuXh70=");
+  background-size: cover;
+
+  background-position: bottom;
+}
+
+.about-ikea {
+  background-image: url("https://media.cnn.com/api/v1/images/stellar/prod/ap24293681704871.jpg?c=16x9&q=h_653,w_1160,c_fill/f_webp");
+  background-position: bottom;
+}
+
+.ikea-museum {
+  background-image: url("https://blooloop.com/wp-content/uploads/2019/01/IKEA-Museum-Main-Exhibition.jpeg");
+}
+
+.ikea-2022 {
+  background-image: url("https://zenkit.com/wp-content/uploads/2018/10/team-meeting-1.jpeg");
+}
+
+.sidebar span {
+  position: absolute;
+  font-weight: bold;
+  top: 10px;
+  left: 10px;
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+
+.subtitle {
+  color: white;
+  font-size: 34px;
+  font-weight: bold;
+}
+.arrow-icon {
+  color: white;
+  margin-right: 14em;
+  margin-top: 1em;
+  font-size: 2em; /* Makes the arrow larger */
+}
+
+.logo sup {
+  font-size: 40px;
+  position: relative;
+  top: -60px;
+  left: -30px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  .main-section {
+    grid-row: 1;
+    min-height: 600px;
+  }
+  .sidebar {
+    grid-row: 2 / span 4;
+    display: grid;
+    grid-template-rows: repeat(4, 200px);
+  }
+  .logo {
+    font-size: 100px; /* Smaller logo on mobile */
+  }
+
+  .logo sup {
+    font-size: 30px;
+    top: -35px;
+    left: -15px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .shop-button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+  .arrow-icon {
+    color: white;
+    margin-right: 12em;
+    font-size: larger;
+  }
+}

@@ -1,21 +1,21 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ProductModule } from './product/product.module';
-import { UtilityModule } from './shared/utility/utility.module';
-import { UserModule } from './user/user.module';
-import { OrderModule } from './order/order.module';
-import { ChatModule } from './chat/chat.module';
-import { GlobalHelperModule } from './shared/global-helper/global-helper.module';
-import { CustomerModule } from './customer/customer.module';
 import {ConfigModule} from '@nestjs/config'
 import {SequelizeModule } from '@nestjs/sequelize';
 import {Dialect} from 'sequelize';
-import { Customer } from './customer/entities/customer.entity';
-import { UserInfoModule } from './user-info/user-info.module';
-import { UserInfo } from './user-info/entities/user-info.entity';
 import { AuthModule } from './auth/auth.module';
 import { AuthUser } from './auth/entities/auth.entitt';
+import { MenuModule } from './menu/menu.module';
+import { Menu } from './menu/entities/menu.entity';
+import { BillModule } from './bill/bill.module';
+import { Bill } from './bill/entities/bill.entity';
+import { Order } from './order/entities/order.entity';
+import { OrderModule } from './order/order.module';
+import { OrderItem } from './order-item/entities/order-item.entity';
+import { Payment } from './payment/entities/payment.entity';
+import { OrderItemModule } from './order-item/order-item.module';
+import { PaymentModule } from './payment/payment.module';
 
 @Module({
   imports:[
@@ -27,16 +27,18 @@ import { AuthUser } from './auth/entities/auth.entitt';
       username : process.env.DB_USER,
       password : process.env.DB_PASSWORD,
       database : process.env.DB_DATABASE,
-      models : [UserInfo,AuthUser],   
+      models : [AuthUser,Menu,Order,Bill,OrderItem,Payment],   
       autoLoadModels: true,
       sync: {alter: true},   
+      synchronize: false,
     }),
-    ProductModule,
-    UtilityModule,
-    GlobalHelperModule,
-    CustomerModule,
-    UserInfoModule,
+
     AuthModule,
+    MenuModule,
+    OrderModule,
+    BillModule,
+    OrderItemModule,
+    PaymentModule,
   ],
   controllers: [AppController],
   providers: [AppService],

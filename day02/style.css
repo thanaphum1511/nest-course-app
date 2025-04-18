@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    margin: 0;
+}
+
+.container {
+    width: 500px;
+    height: 300px;
+    border: 2px solid brown;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.logo {
+    border: 2px solid blue;
+    box-shadow: 2px 2px 2px ;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    left: 20px;
+    top: 25px;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.menu-item {
+    border: 2px solid blue;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px;
+}

@@ -10,7 +10,7 @@ import { JwtStrategy } from './jwt.strategy';
 @Module({
   imports:[
     PassportModule,
-    JwtModule.register({
+    JwtModule.register({ //ตั้งค่าหมดอายุJWT
       signOptions: { expiresIn: '1d'}
     }),
     SequelizeModule.forFeature([AuthUser])],

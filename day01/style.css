@@ -1,0 +1,54 @@
+/* Tag selector */
+h1 {
+    color: red;
+}
+
+/* Class selector */
+.big-text {
+    font-size: 4rem;
+}
+
+.left-15 {
+    margin-left: 1.5em;
+}
+
+/* ID selector */
+#border {
+    border: 1px solid black;
+}
+
+.my-text {
+    font-size: 2rem;
+    border: 8px solid black;
+    box-shadow: 4px 4px 3px 2px rgb(93, 72, 72);
+    width: fit-content;
+
+    border-radius:0.5em 1.5em;
+
+    margin: auto;
+
+    padding: 1em 2em;
+    background: lightblue;
+    color: blue;
+
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px black;
+    /* margin-top: 1em;
+    margin-right: 2em;
+    margin-bottom: 3em;
+    margin-left: 4em; */
+
+    /* margin: 1em 2em 3em 4em; */
+}
+ .box1{
+    margin-left: 2em ;
+    width: 100px;
+    height: 100px;
+    background: red;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    box-sizing: border-box;
+    border: 10px solid blue;
+ }
+

@@ -63,7 +63,7 @@ export class AuthService {
 
   async getUsertProflie(id: number){
     return await this.authUserModel.findByPk(id, {
-      attributes: ['id','user','email']
+      attributes: ['id','username','email']
     });
   }
 }

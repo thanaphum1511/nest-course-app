@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 2px solid black; */
+}
+
+div{
+  width: 200px;
+  height: 200px;
+}
+
+.box1{
+  background: red;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+}
+
+.box2 {
+  background: blue;
+}
