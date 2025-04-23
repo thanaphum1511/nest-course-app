@@ -10,6 +10,8 @@ async function bootstrap() {
   (AppModule);
   app.useGlobalPipes(new ValidationPipe());
 
+  app.enableCors();
+
   app.useStaticAssets(join(__dirname, '..', 'public'));
   app.setBaseViewsDir(join(__dirname, '..', 'views'));
   app.setViewEngine('hbs');

@@ -16,6 +16,13 @@ import { OrderItem } from './order-item/entities/order-item.entity';
 import { Payment } from './payment/entities/payment.entity';
 import { OrderItemModule } from './order-item/order-item.module';
 import { PaymentModule } from './payment/payment.module';
+import { CustomerModule } from './customer/customer.module';
+import { MusicStoreModule } from './musicstore/musicstore.module';
+import { MusicsModule } from './musics/musics.module';
+import { MusicStore } from './musicstore/entities/musicstore.entity';
+import { MusicshopModule } from './musicshop/musicshop.module';
+import { Musicshop } from './musicshop/entities/musicshop.entity';
+
 
 @Module({
   imports:[
@@ -27,10 +34,20 @@ import { PaymentModule } from './payment/payment.module';
       username : process.env.DB_USER,
       password : process.env.DB_PASSWORD,
       database : process.env.DB_DATABASE,
-      models : [AuthUser,Menu,Order,Bill,OrderItem,Payment],   
+      models : [
+        AuthUser,
+        Menu,
+        Order,
+        Bill,
+        OrderItem,
+        Payment,
+        MusicStore,
+        Musicshop
+      ],   
       autoLoadModels: true,
+      // sync: {force: true},
       sync: {alter: true},   
-      synchronize: false,
+      // synchronize: false,
     }),
 
     AuthModule,
@@ -39,6 +56,11 @@ import { PaymentModule } from './payment/payment.module';
     BillModule,
     OrderItemModule,
     PaymentModule,
+    CustomerModule,
+    MusicStoreModule,
+    MusicsModule,
+    MusicshopModule,
+
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -53,7 +53,10 @@ export class AuthService {
       throw new UnauthorizedException("Error password!!!");
     }
 
-    const payload = { user_id: authuser.id };
+    const payload = { user_id: authuser.id,
+      email: authuser.email, 
+      username: authuser.username 
+     };
     const token = await this.jwtService.signAsync( payload, {
       secret : process.env.JWT_SECRET_KEY
     });
